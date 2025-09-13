@@ -22,7 +22,7 @@ const ProductListsSidebar: React.FC = () => {
       name: "Green Lettuce",
       price: "$14.99",
       rating: 4,
-    }
+    },
   ];
 
   const bestSeller: Product[] = [
@@ -70,26 +70,26 @@ const ProductListsSidebar: React.FC = () => {
   ];
 
   return (
-    <section className="mt-10 ml-6 w-full">
+    <section className="mt-10 ml-6 w-full m-32">
       <div className="flex gap-5 justify-center">
         <div className="flex flex-wrap gap-6 items-start mr-0">
           <div className="min-w-60 w-[312px]">
             <h3 className="text-2xl font-medium text-zinc-900">Hot Deals</h3>
-            {hotDeals.map((product, index) => (
+            {hotDeals.map((product: Product, index: number) => (
               <DealsCard key={index} product={product} />
             ))}
           </div>
 
           <div className="min-w-60 w-[312px]">
             <h3 className="text-2xl font-medium text-zinc-900">Best Seller</h3>
-            {bestSeller.map((product, index) => (
+            {bestSeller.map((product: Product, index: number) => (
               <DealsCard key={index} product={product} />
             ))}
           </div>
 
           <div className="min-w-60 w-[312px]">
             <h3 className="text-2xl font-medium text-zinc-900">Top Rated</h3>
-            {topRated.map((product, index) => (
+            {topRated.map((product: Product, index: number) => (
               <DealsCard key={index} product={product} />
             ))}
           </div>
