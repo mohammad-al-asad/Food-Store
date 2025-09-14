@@ -10,7 +10,7 @@ export type FooterSection = {
   title: string;
   links: string[];
 };
-const Footer: React.FC = () => {
+const HomeFooter: React.FC = () => {
   const footerSections: FooterSection[] = [
     {
       title: "My Account",
@@ -130,4 +130,4 @@ export function BottomBar() {
   );
 }
 
-export default Footer;
+export default HomeFooter;

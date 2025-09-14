@@ -8,7 +8,7 @@ import StatsSection from "~/components/StatsSection";
 import PromotionalBanners from "~/components/PromotionBanner";
 import BestProduct from "~/components/BestProduct";
 import Deals from "~/components/Deals";
-import Footer from "~/components/Footer";
+import HomeFooter from "~/components/HomeFooter";
 import Blog from "~/components/Blog";
 import Testimonial from "~/components/Testomonial";
 import Contact from "~/components/Contact";
@@ -36,7 +36,7 @@ export default function Home() {
       <Blog />
       <Testimonial />
       <Contact />
-      <Footer />
+      <HomeFooter />
     </div>
   );
 }
