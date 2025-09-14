@@ -3,18 +3,20 @@ import { FaArrowRight } from "react-icons/fa";
 import SingleProduct from "./SingleProduct";
 
 export type Product = {
-    image: string,
-    name: string,
-    price: string,
-    originalPrice?: string,
-    rating: number,
-    sale?: boolean,
-    salePercent?: string
+  id: string;
+  image: string;
+  name: string;
+  price: string;
+  originalPrice?: string;
+  rating: number;
+  sale?: boolean;
+  salePercent?: string;
 };
 
 const FeaturedProducts: React.FC = () => {
   const products: Product[] = [
     {
+      id : "1",
       image: "./products/greenApple.jpg",
       name: "Green Apple",
       price: "$14.99",
@@ -24,18 +26,21 @@ const FeaturedProducts: React.FC = () => {
       salePercent: "50%",
     },
     {
+      id : "2",
       image: "./products/cabbage.jpg",
       name: "Chanise Cabbage",
       price: "$14.99",
       rating: 3,
     },
     {
+      id : "3",
       image: "./products/greenCapsicum.jpg",
       name: "Green Capsicum",
       price: "$14.99",
       rating: 4,
     },
     {
+      id : "4",
       image: "./products/ladiesFinger.jpg",
       name: "Ladies Finger",
       price: "$14.99",
@@ -65,7 +70,7 @@ const FeaturedProducts: React.FC = () => {
       <div className="flex flex-wrap gap-10 items-center justify-center mt-10 w-full">
         <div className="flex gap-5 justify-center">
           {products.map((product: Product, index: number) => (
-            <SingleProduct key={index} product={product} index={index}/>
+            <SingleProduct key={index} product={product} index={index} />
           ))}
         </div>
       </div>

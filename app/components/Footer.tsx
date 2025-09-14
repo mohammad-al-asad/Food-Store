@@ -10,7 +10,8 @@ export type FooterSection = {
   title: string;
   links: string[];
 };
-const HomeFooter: React.FC = () => {
+const catagories = [{title:"Fruit & Vegetables", link:""},{title:"Fruit & Vegetables", link:""},{title:"Fruit & Vegetables", link:""},{title:"Fruit & Vegetables", link:""},]
+const Footer: React.FC = () => {
   const footerSections: FooterSection[] = [
     {
       title: "My Account",
@@ -28,7 +29,7 @@ const HomeFooter: React.FC = () => {
 
   return (
     <footer className="bg-zinc-900 relative">
-      <img src="./BG/footerBG.png" alt="BG" className="absolute top-0 bottom-0 left-0 right-0 z-50" />
+      <img src="./BG/footerBG.png" alt="BG" className="absolute top-0 bottom-0 left-0 right-0 z-10" />
       <div className="flex overflow-hidden flex-col pb-20 pt-3 mt-20 w-full px-[300px]">
         <div className="flex flex-wrap gap-5 justify-between items-end self-end w-full">
           {/* First Coloum */}
@@ -45,7 +46,7 @@ const HomeFooter: React.FC = () => {
               Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis
               dui, eget bibendum magn.
             </p>
-            <div className="flex gap-2 mt-4">
+            <div className="flex gap-2 mt-4 z-50">
               <div className="p-2 bg-transparent text-neutral-400 rounded-full hover:bg-green-500 hover:text-white transition-all duration-200">
                 <FaFacebookF size={25} className="p-0.5" />
               </div>
@@ -62,13 +63,13 @@ const HomeFooter: React.FC = () => {
           </div>
           {/* Links */}
           {footerSections.map((section: FooterSection, index: number) => (
-            <div key={index} className="flex flex-col items-start mt-16">
+            <div key={index} className="flex flex-col items-start mt-16 z-50">
               <h4 className="self-stretch text-lg font-medium text-white">
                 {section.title}
               </h4>
               <div className="h-0.5 w-6 mt-0.5 bg-green-500" />
               <nav className="pt-2 mt-3 text-sm text-neutral-400">
-                {section.links.map((link, linkIndex) => (
+                {section.links.map((link:string, linkIndex:number) => (
                   <a
                     key={linkIndex}
                     href="#"
@@ -78,10 +79,23 @@ const HomeFooter: React.FC = () => {
                   </a>
                 ))}
               </nav>
+          {/* Last Coloum Other*/}
+              {/* <nav className="pt-2 mt-3 text-sm text-neutral-400">
+                {catagories.map((catagory, index) => (
+                  <a
+                    key={index}
+                    href={catagory.link}
+                    className={`block ${index > 0 ? "mt-3" : ""} hover:text-white text-neutral-400`}
+                  >
+                    {catagory.title}
+                  </a>
+                ))}
+              </nav> */}
+
             </div>
           ))}
 
-          {/* Last Coloum */}
+          {/* Last Coloum Home*/}
           <div className="self-stretch my-auto">
             <h4 className="text-lg font-medium text-white">
               Download Mobile App
@@ -110,6 +124,7 @@ const HomeFooter: React.FC = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
       <BottomBar />
@@ -130,4 +145,4 @@ export function BottomBar() {
   );
 }
 
-export default HomeFooter;
+export default Footer;

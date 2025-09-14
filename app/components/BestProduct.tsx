@@ -1,27 +1,32 @@
 import React from "react";
 import SingleProduct from "./SingleProduct";
+import type { Product } from "./FeaturesProduct";
 
 const FeaturedProducts: React.FC = () => {
-  const products = [
+  const products: Product[]= [
     {
+      id: "1",
       image: "./products/greenApple.jpg",
       name: "Green Apple",
       price: "$14.99",
       rating: 4,
     },
     {
+      id: "2",
       image: "./products/cabbage.jpg",
       name: "Chanise Cabbage",
       price: "$14.99",
       rating: 3,
     },
     {
+      id: "3",
       image: "./products/greenCapsicum.jpg",
       name: "Green Capsicum",
       price: "$14.99",
       rating: 5,
     },
     {
+      id: "4",
       image: "./products/chili.jpg",
       name: "Green Chili",
       price: "$14.99",

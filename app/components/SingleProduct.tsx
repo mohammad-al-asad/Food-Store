@@ -3,16 +3,16 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { IoEyeOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import type { Product } from "./FeaturesProduct";
+import { Link } from "react-router";
 
 function SingleProduct({
-  index,
   product,
 }: {
   index: number;
   product: Product;
 }) {
   return (
-    <article key={index} className="group">
+    <Link to={`product/${product.id}`} className="group">
       <div className="relative flex flex-col justify-end w-full bg-white rounded-lg border-2 border-neutral-200 hover:border-green-600 hover:shadow-lg hover:shadow-green-200 pt-4 transition-all duration-200">
         {/* Overlay */}
         <div className="absolute z-20 hidden group-hover:flex flex-col gap-2 top-5 right-5">
@@ -74,7 +74,7 @@ function SingleProduct({
           </div>
         </div>
       </div>
-    </article>
+    </Link>
   );
 }
 

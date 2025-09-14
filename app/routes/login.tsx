@@ -1,3 +1,4 @@
+import Footer from "~/components/Footer";
 import { Button } from "../components/ui/button";
 import {
   Form,
@@ -19,7 +20,8 @@ function login() {
   });
   function onSubmit() {}
   return (
-    <Form {...form}>
+    <div className="h-screen flex flex-col justify-between">
+      <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
@@ -40,6 +42,8 @@ function login() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
+    <Footer/>
+    </div>
   );
 }
 
