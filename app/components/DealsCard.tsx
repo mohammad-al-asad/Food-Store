@@ -1,4 +1,4 @@
-import type { Product } from "./FeaturesProduct";
+import type { Product } from "./home/FeaturesProduct";
 import { Rating, RatingButton } from "./ui/shadcn-io/rating";
 import { IoEyeOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";

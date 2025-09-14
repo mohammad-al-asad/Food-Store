@@ -1,16 +1,18 @@
 import React from "react";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { IoLogoInstagram } from "react-icons/io";
-import { FaPinterestP } from "react-icons/fa";
 import { FaGooglePlay } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
+import SocialLink from "./SocialLink";
 
 export type FooterSection = {
   title: string;
   links: string[];
 };
-const catagories = [{title:"Fruit & Vegetables", link:""},{title:"Fruit & Vegetables", link:""},{title:"Fruit & Vegetables", link:""},{title:"Fruit & Vegetables", link:""},]
+const catagories = [
+  { title: "Fruit & Vegetables", link: "#" },
+  { title: "Fruit & Vegetables", link: "#" },
+  { title: "Fruit & Vegetables", link: "#" },
+  { title: "Fruit & Vegetables", link: "#" },
+];
 const Footer: React.FC = () => {
   const footerSections: FooterSection[] = [
     {
@@ -29,37 +31,28 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-zinc-900 relative">
-      <img src="./BG/footerBG.png" alt="BG" className="absolute top-0 bottom-0 left-0 right-0 z-10" />
+      <img
+        src="../BG/footerBG.png"
+        alt="BG"
+        className="absolute top-0 bottom-0 left-0 right-0 z-10"
+      />
       <div className="flex overflow-hidden flex-col pb-20 pt-3 mt-20 w-full px-[300px]">
         <div className="flex flex-wrap gap-5 justify-between items-end self-end w-full">
           {/* First Coloum */}
           <div className="flex flex-col items-start mt-16 w-[300px]">
             <div className="flex gap-2 items-center text-3xl font-medium tracking-tighter leading-none text-white whitespace-nowrap">
               <img
-                src="./logo.png"
+                src="../logo.png"
                 className="object-contain shrink-0 self-stretch my-auto w-8 aspect-square"
                 alt="Ecobazar logo"
               />
               <h3 className="self-stretch my-auto text-white">Ecobazar</h3>
             </div>
-            <p className="self-stretch mt-4 text-sm leading-5 text-neutral-400">
+            <p className="self-stretch mt-4 text-sm leading-5 text-neutral-400 mb-4">
               Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis
               dui, eget bibendum magn.
             </p>
-            <div className="flex gap-2 mt-4 z-50">
-              <div className="p-2 bg-transparent text-neutral-400 rounded-full hover:bg-green-500 hover:text-white transition-all duration-200">
-                <FaFacebookF size={25} className="p-0.5" />
-              </div>
-              <div className="p-2 bg-transparent text-neutral-400 rounded-full hover:bg-green-500 hover:text-white transition-all duration-200">
-                <FaTwitter size={25} className="p-0.5" />
-              </div>
-              <div className="p-2 bg-transparent text-neutral-400 rounded-full hover:bg-green-500 hover:text-white transition-all duration-200">
-                <IoLogoInstagram size={25} className="p-0.5" />
-              </div>
-              <div className="p-2 bg-transparent text-neutral-400 rounded-full hover:bg-green-500 hover:text-white transition-all duration-200">
-                <FaPinterestP size={25} className="p-0.5" />
-              </div>
-            </div>
+            <SocialLink />
           </div>
           {/* Links */}
           {footerSections.map((section: FooterSection, index: number) => (
@@ -69,7 +62,7 @@ const Footer: React.FC = () => {
               </h4>
               <div className="h-0.5 w-6 mt-0.5 bg-green-500" />
               <nav className="pt-2 mt-3 text-sm text-neutral-400">
-                {section.links.map((link:string, linkIndex:number) => (
+                {section.links.map((link: string, linkIndex: number) => (
                   <a
                     key={linkIndex}
                     href="#"
@@ -79,7 +72,7 @@ const Footer: React.FC = () => {
                   </a>
                 ))}
               </nav>
-          {/* Last Coloum Other*/}
+              {/* Last Coloum Other*/}
               {/* <nav className="pt-2 mt-3 text-sm text-neutral-400">
                 {catagories.map((catagory, index) => (
                   <a
@@ -91,7 +84,6 @@ const Footer: React.FC = () => {
                   </a>
                 ))}
               </nav> */}
-
             </div>
           ))}
 
@@ -124,7 +116,6 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
       <BottomBar />
@@ -139,7 +130,7 @@ export function BottomBar() {
         Ecobazar eCommerce © 2021. All Rights Reserved
       </p>
       <div className="items-start self-stretch my-auto min-w-60">
-        <img src="./payment.png" alt="payment" />
+        <img src="../payment.png" alt="payment" />
       </div>
     </div>
   );

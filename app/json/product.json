@@ -1,218 +1,222 @@
 [
-{
-"id": "251594",
-"name": "Chinese Cabbage",
-"description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.",
-"price": {
-"original_price": "$48.00",
-"discounted_price": "$17.28",
-"discount_percentage": 64
-},
-"availability": "In Stock",
-"sku": "251594",
-"brand": "Farmary",
-"category": "Vegetables",
-"tags": ["Vegetables", "Healthy", "Chinese", "Cabbage", "Green Cabbage"],
-"additional_information": {
-"weight": "100g",
-"organic": true,
-"nutrition": "100 g of fresh leaves provides 20% of daily Vitamin C."
-},
-"images": [
-"./products/cabbage.jpg",
-"https://example.com/images/product-image-2.jpg"
-]
-},
-{
-"id": "251595",
-"name": "Fresh Apples",
-"description": "Fresh, crunchy apples harvested from local orchards. Perfect for a healthy snack or adding to your favorite dishes.",
-"price": {
-"original_price": "$30.00",
-"discounted_price": "$18.99",
-"discount_percentage": 37
-},
-"availability": "In Stock",
-"sku": "251595",
-"brand": "OrchardFresh",
-"category": "Fresh Food",
-"tags": ["Fruit", "Fresh", "Healthy", "Apple"],
-"additional_information": {
-"weight": "1kg",
-"organic": true,
-"nutrition": "1 apple provides 15% of daily fiber."
-},
-"images": [
-"./products/greenApple.jpg",
-"https://example.com/images/fresh-apples-2.jpg"
-]
-},
-{
-"id": "251596",
-"name": "Salmon Fillet",
-"description": "Freshly caught wild salmon fillets, perfect for grilling, baking, or pan-searing.",
-"price": {
-"original_price": "$60.00",
-"discounted_price": "$40.00",
-"discount_percentage": 33
-},
-"availability": "In Stock",
-"sku": "251596",
-"brand": "OceanCatch",
-"category": "Fish",
-"tags": ["Fish", "Healthy", "Wild", "Salmon"],
-"additional_information": {
-"weight": "500g",
-"organic": false,
-"nutrition": "Rich in omega-3 fatty acids and protein."
-},
-"images": [
-"https://example.com/images/salmon-fillet-1.jpg",
-"https://example.com/images/salmon-fillet-2.jpg"
-]
-},
-{
-"id": "251597",
-"name": "Beef Steak",
-"description": "Premium cuts of beef steak, tender and juicy, perfect for grilling orpan-searing.",
-"price": {
-"original_price": "$80.00",
-"discounted_price": "$50.00",
-"discount_percentage": 38
-},
-"availability": "In Stock",
-"sku": "251597",
-"brand": "PrimeBeef",
-"category": "Meat",
-"tags": ["Meat", "Beef", "Steak", "Premium"],
-"additional_information": {
-"weight": "400g",
-"organic": false,
-"nutrition": "High in protein and iron."
-},
-"images": [
-"https://example.com/images/beef-steak-1.jpg",
-"https://example.com/images/beef-steak-2.jpg"
-]
-},
-{
-"id": "251598",
-"name": "Spring Water",
-"description": "Pure spring water sourced from natural springs. Refreshing and hydrating, ideal for any occasion.",
-"price": {
-"original_price": "$5.00",
-"discounted_price": "$3.50",
-"discount_percentage": 30
-},
-"availability": "In Stock",
-"sku": "251598",
-"brand": "SpringFresh",
-"category": "Drinks",
-"tags": ["Water", "Hydration", "Natural", "Fresh"],
-"additional_information": {
-"weight": "1L",
-"organic": true,
-"nutrition": "Contains essential minerals for hydration."
-},
-"images": [
-"https://example.com/images/spring-water-1.jpg",
-"https://example.com/images/spring-water-2.jpg"
-]
-},
-{
-"id": "251599",
-"name": "Chips & Snacks",
-"description": "Crunchy, delicious chips made with all-natural ingredients. Perfect for a quick snack.",
-"price": {
-"original_price": "$10.00",
-"discounted_price": "$6.50",
-"discount_percentage": 35
-},
-"availability": "In Stock",
-"sku": "251599",
-"brand": "SnackTime",
-"category": "Snacks",
-"tags": ["Snacks", "Chips", "Salty", "Crunchy"],
-"additional_information": {
-"weight": "200g",
-"organic": false,
-"nutrition": "Contains 10g of protein per serving."
-},
-"images": [
-"https://example.com/images/chips-snacks-1.jpg",
-"https://example.com/images/chips-snacks-2.jpg"
-]
-},
-{
-"id": "251600",
-"name": "Carrot Sticks",
-"description": "Fresh carrot sticks, a healthy and crunchy snack option. Perfect for dipping or snacking on the go.",
-"price": {
-"original_price": "$12.00",
-"discounted_price": "$8.50",
-"discount_percentage": 29
-},
-"availability": "In Stock",
-"sku": "251600",
-"brand": "VeggieDelight",
-"category": "Vegetables",
-"tags": ["Vegetables", "Healthy", "Carrot", "Snack"],
-"additional_information": {
-"weight": "300g",
-"organic": true,
-"nutrition": "Rich in vitamin A and fiber."
-},
-"images": [
-"https://example.com/images/carrot-sticks-1.jpg",
-"https://example.com/images/carrot-sticks-2.jpg"
-]
-},
-{
-"id": "251601",
-"name": "Orange Juice",
-"description": "Freshly squeezed orange juice, packed with vitamin C and natural sweetness.",
-"price": {
-"original_price": "$10.00",
-"discounted_price": "$7.50",
-"discount_percentage": 25
-},
-"availability": "In Stock",
-"sku": "251601",
-"brand": "FreshSqueeze",
-"category": "Drinks",
-"tags": ["Juice", "Fresh", "Orange", "Vitamin C"],
-"additional_information": {
-"weight": "1L",
-"organic": false,
-"nutrition": "Contains 100% vitamin C, no added sugar."
-},
-"images": [
-"https://example.com/images/orange-juice-1.jpg",
-"https://example.com/images/orange-juice-2.jpg"
-]
-},
-{
-"id": "251602",
-"name": "Chicken Breasts",
-"description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
-"price": {
-"original_price": "$15.00",
-"discounted_price": "$12.00",
-"discount_percentage": 20
-},
-"availability": "In Stock",
-"sku": "251602",
-"brand": "FarmFresh",
-"category": "Meat",
-"tags": ["Meat", "Chicken", "Protein", "Healthy"],
-"additional_information": {
-"weight": "500g",
-"organic": true,
-"nutrition": "High in protein, low in fat."
-},
-"images": [
-"https://example.com/images/chicken-breasts-1.jpg",
-"https://example.com/images/chicken-breasts-2.jpg"
-]
-}
+  {
+    "id": "251594",
+    "name": "Chinese Cabbage",
+    "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.",
+    "price": {
+      "original_price": "$48.00",
+      "discounted_price": "$17.28",
+      "discount_percentage": 64
+    },
+    "availability": "In Stock",
+    "rating": { "value": 4, "quantity": 10 },
+    "sku": "251594",
+    "brand": "Farmary",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Healthy", "Chinese", "Cabbage", "Green Cabbage"],
+    "additional_information": {
+      "weight": "100g",
+      "organic": true,
+      "nutrition": "100 g of fresh leaves provides 20% of daily Vitamin C."
+    },
+    "images": [
+      "../products/cabbage.jpg",
+      "../products/cabbage-2.png",
+      "../products/cabbage-3.png",
+      "../products/cabbage-4.png",
+      "../products/cabbage-5.png"
+    ]
+  },
+  {
+    "id": "251595",
+    "name": "Fresh Apples",
+    "description": "Fresh, crunchy apples harvested from local orchards. Perfect for a healthy snack or adding to your favorite dishes.",
+    "price": {
+      "original_price": "$30.00",
+      "discounted_price": "$18.99",
+      "discount_percentage": 37
+    },
+    "availability": "In Stock",
+    "sku": "251595",
+    "brand": "OrchardFresh",
+    "category": "Fresh Food",
+    "tags": ["Fruit", "Fresh", "Healthy", "Apple"],
+    "additional_information": {
+      "weight": "1kg",
+      "organic": true,
+      "nutrition": "1 apple provides 15% of daily fiber."
+    },
+    "images": [
+      "./products/greenApple.jpg",
+      "https://example.com/images/fresh-apples-2.jpg"
+    ]
+  },
+  {
+    "id": "251596",
+    "name": "Salmon Fillet",
+    "description": "Freshly caught wild salmon fillets, perfect for grilling, baking, or pan-searing.",
+    "price": {
+      "original_price": "$60.00",
+      "discounted_price": "$40.00",
+      "discount_percentage": 33
+    },
+    "availability": "In Stock",
+    "sku": "251596",
+    "brand": "OceanCatch",
+    "category": "Fish",
+    "tags": ["Fish", "Healthy", "Wild", "Salmon"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": false,
+      "nutrition": "Rich in omega-3 fatty acids and protein."
+    },
+    "images": [
+      "https://example.com/images/salmon-fillet-1.jpg",
+      "https://example.com/images/salmon-fillet-2.jpg"
+    ]
+  },
+  {
+    "id": "251597",
+    "name": "Beef Steak",
+    "description": "Premium cuts of beef steak, tender and juicy, perfect for grilling orpan-searing.",
+    "price": {
+      "original_price": "$80.00",
+      "discounted_price": "$50.00",
+      "discount_percentage": 38
+    },
+    "availability": "In Stock",
+    "sku": "251597",
+    "brand": "PrimeBeef",
+    "category": "Meat",
+    "tags": ["Meat", "Beef", "Steak", "Premium"],
+    "additional_information": {
+      "weight": "400g",
+      "organic": false,
+      "nutrition": "High in protein and iron."
+    },
+    "images": [
+      "https://example.com/images/beef-steak-1.jpg",
+      "https://example.com/images/beef-steak-2.jpg"
+    ]
+  },
+  {
+    "id": "251598",
+    "name": "Spring Water",
+    "description": "Pure spring water sourced from natural springs. Refreshing and hydrating, ideal for any occasion.",
+    "price": {
+      "original_price": "$5.00",
+      "discounted_price": "$3.50",
+      "discount_percentage": 30
+    },
+    "availability": "In Stock",
+    "sku": "251598",
+    "brand": "SpringFresh",
+    "category": "Drinks",
+    "tags": ["Water", "Hydration", "Natural", "Fresh"],
+    "additional_information": {
+      "weight": "1L",
+      "organic": true,
+      "nutrition": "Contains essential minerals for hydration."
+    },
+    "images": [
+      "https://example.com/images/spring-water-1.jpg",
+      "https://example.com/images/spring-water-2.jpg"
+    ]
+  },
+  {
+    "id": "251599",
+    "name": "Chips & Snacks",
+    "description": "Crunchy, delicious chips made with all-natural ingredients. Perfect for a quick snack.",
+    "price": {
+      "original_price": "$10.00",
+      "discounted_price": "$6.50",
+      "discount_percentage": 35
+    },
+    "availability": "In Stock",
+    "sku": "251599",
+    "brand": "SnackTime",
+    "category": "Snacks",
+    "tags": ["Snacks", "Chips", "Salty", "Crunchy"],
+    "additional_information": {
+      "weight": "200g",
+      "organic": false,
+      "nutrition": "Contains 10g of protein per serving."
+    },
+    "images": [
+      "https://example.com/images/chips-snacks-1.jpg",
+      "https://example.com/images/chips-snacks-2.jpg"
+    ]
+  },
+  {
+    "id": "251600",
+    "name": "Carrot Sticks",
+    "description": "Fresh carrot sticks, a healthy and crunchy snack option. Perfect for dipping or snacking on the go.",
+    "price": {
+      "original_price": "$12.00",
+      "discounted_price": "$8.50",
+      "discount_percentage": 29
+    },
+    "availability": "In Stock",
+    "sku": "251600",
+    "brand": "VeggieDelight",
+    "category": "Vegetables",
+    "tags": ["Vegetables", "Healthy", "Carrot", "Snack"],
+    "additional_information": {
+      "weight": "300g",
+      "organic": true,
+      "nutrition": "Rich in vitamin A and fiber."
+    },
+    "images": [
+      "https://example.com/images/carrot-sticks-1.jpg",
+      "https://example.com/images/carrot-sticks-2.jpg"
+    ]
+  },
+  {
+    "id": "251601",
+    "name": "Orange Juice",
+    "description": "Freshly squeezed orange juice, packed with vitamin C and natural sweetness.",
+    "price": {
+      "original_price": "$10.00",
+      "discounted_price": "$7.50",
+      "discount_percentage": 25
+    },
+    "availability": "In Stock",
+    "sku": "251601",
+    "brand": "FreshSqueeze",
+    "category": "Drinks",
+    "tags": ["Juice", "Fresh", "Orange", "Vitamin C"],
+    "additional_information": {
+      "weight": "1L",
+      "organic": false,
+      "nutrition": "Contains 100% vitamin C, no added sugar."
+    },
+    "images": [
+      "https://example.com/images/orange-juice-1.jpg",
+      "https://example.com/images/orange-juice-2.jpg"
+    ]
+  },
+  {
+    "id": "251602",
+    "name": "Chicken Breasts",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "sku": "251602",
+    "brand": "FarmFresh",
+    "category": "Meat",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": [
+      "https://example.com/images/chicken-breasts-1.jpg",
+      "https://example.com/images/chicken-breasts-2.jpg"
+    ]
+  }
 ]
