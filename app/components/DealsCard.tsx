@@ -15,26 +15,19 @@ const ProductCard = ({ product }: { product: Product }) => (
     </div>
     <div className="flex flex-col justify-center px-3 pt-6 pb-6">
       <div className="flex flex-col w-full max-w-72">
-        <h4 className="text-sm text-neutral-600 group-hover:text-green-800">{product.name}</h4>
+        <h4 className="text-sm text-neutral-600 group-hover:text-green-800">
+          {product.name}
+        </h4>
         {/* Overlay */}
         <div className="group-hover:flex hidden gap-3 mt-2">
           <div className="bg-[#F2F2F2] rounded-full">
-            <IoEyeOutline
-              size={40}
-              className="p-2"
-            />
+            <IoEyeOutline size={40} className="p-2" />
           </div>
           <div className="bg-[#F2F2F2] rounded-full">
-            <CiHeart
-              size={40}
-              className="p-2"
-            />
+            <CiHeart size={40} className="p-2" />
           </div>
           <div className="rounded-full bg-green-500 text-white">
-            <HiOutlineShoppingBag
-              size={40}
-              className="p-2"
-            />
+            <HiOutlineShoppingBag size={40} className="p-2" />
           </div>
         </div>
 

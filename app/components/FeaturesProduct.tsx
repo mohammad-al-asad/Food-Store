@@ -65,7 +65,7 @@ const FeaturedProducts: React.FC = () => {
       <div className="flex flex-wrap gap-10 items-center justify-center mt-10 w-full">
         <div className="flex gap-5 justify-center">
           {products.map((product: Product, index: number) => (
-            <SingleProduct product={product} index={index}/>
+            <SingleProduct key={index} product={product} index={index}/>
           ))}
         </div>
       </div>

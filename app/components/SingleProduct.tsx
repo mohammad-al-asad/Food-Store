@@ -4,7 +4,13 @@ import { IoEyeOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import type { Product } from "./FeaturesProduct";
 
-function SingleProduct({index,product}:{index:number,product:Product}) {
+function SingleProduct({
+  index,
+  product,
+}: {
+  index: number;
+  product: Product;
+}) {
   return (
     <article key={index} className="group">
       <div className="relative flex flex-col justify-end w-full bg-white rounded-lg border-2 border-neutral-200 hover:border-green-600 hover:shadow-lg hover:shadow-green-200 pt-4 transition-all duration-200">
@@ -64,10 +70,7 @@ function SingleProduct({index,product}:{index:number,product:Product}) {
           </div>
           {/* Cart */}
           <div className="p-2 m-4 self-end bg-[#F2F2F2] rounded-full group-hover:bg-green-500 group-hover:text-white transition-all duration-200">
-            <HiOutlineShoppingBag
-              size={40}
-              className="p-2"
-            />
+            <HiOutlineShoppingBag size={40} className="p-2" />
           </div>
         </div>
       </div>

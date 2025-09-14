@@ -1,9 +1,4 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
-import { Rating, RatingButton } from "./ui/shadcn-io/rating";
-import { HiOutlineShoppingBag } from "react-icons/hi2";
-import { IoEyeOutline } from "react-icons/io5";
-import { CiHeart } from "react-icons/ci";
 import SingleProduct from "./SingleProduct";
 
 const FeaturedProducts: React.FC = () => {
@@ -52,7 +47,7 @@ const FeaturedProducts: React.FC = () => {
       <div className="flex flex-wrap gap-10 items-center justify-center mt-10 w-full">
         <div className="flex gap-5 justify-center">
           {products.map((product, index) => (
-            <SingleProduct index={index} product={product}/>
+            <SingleProduct index={index} product={product} />
           ))}
         </div>
       </div>
