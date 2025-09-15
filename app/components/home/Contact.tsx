@@ -4,7 +4,7 @@ import { LiaPhoneVolumeSolid } from "react-icons/lia";
 
 const Contact: React.FC = () => {
   return (
-    <section className="mt-5 w-full flex flex-col justify-center items-center px-[300px]">
+    <section className="mt-5 mb-20 w-full flex flex-col justify-center items-center px-[300px]">
       <div className="mb-4">
         <img src="./decorationText.png" alt="decoration text" />
       </div>

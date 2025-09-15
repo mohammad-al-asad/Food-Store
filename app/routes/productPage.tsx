@@ -6,6 +6,8 @@ import Footer from "~/components/Footer";
 import { IoHomeOutline } from "react-icons/io5";
 import ProductDetails from "~/components/product/ProductDetails";
 import ProductTab from "~/components/product/ProductTab";
+import Newsletter from "~/components/Newsletter";
+import Nav from "~/components/Nav";
 
 export interface ProductDetail {
   id: string;
@@ -43,39 +45,40 @@ function ProductPage() {
     );
   }
 
-  // Related products
-  const relatedProducts: Product[] = [
-    {
-      image: "../products/greenApple.jpg",
-      name: "Green Apple",
-      price: "$14.99",
-      originalPrice: "$20.99",
-      rating: 4,
-      sale: true,
-      salePercent: "50%",
-    },
-    {
-      image: "../products/cabbage.jpg",
-      name: "Chanise Cabbage",
-      price: "$14.99",
-      rating: 3,
-    },
-    {
-      image: "../products/greenCapsicum.jpg",
-      name: "Green Capsicum",
-      price: "$14.99",
-      rating: 4,
-    },
-    {
-      image: "../products/ladiesFinger.jpg",
-      name: "Ladies Finger",
-      price: "$14.99",
-      rating: 5,
-    },
-  ];
+  // // Related products
+  // const relatedProducts: Product[] = [
+  //   {
+  //     image: "../products/greenApple.jpg",
+  //     name: "Green Apple",
+  //     price: "$14.99",
+  //     originalPrice: "$20.99",
+  //     rating: 4,
+  //     sale: true,
+  //     salePercent: "50%",
+  //   },
+  //   {
+  //     image: "../products/cabbage.jpg",
+  //     name: "Chanise Cabbage",
+  //     price: "$14.99",
+  //     rating: 3,
+  //   },
+  //   {
+  //     image: "../products/greenCapsicum.jpg",
+  //     name: "Green Capsicum",
+  //     price: "$14.99",
+  //     rating: 4,
+  //   },
+  //   {
+  //     image: "../products/ladiesFinger.jpg",
+  //     name: "Ladies Finger",
+  //     price: "$14.99",
+  //     rating: 5,
+  //   },
+  // ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
+      <Nav />
       {/* Breadcrumb */}
       <div className="h-[120px] bg-[url(../Breadcrumbs.png)] bg-cover bg-no-repeat flex items-center pl-[200px]">
         <div className="flex items-center text-gray-400 gap-2 text-[16px]">
@@ -90,6 +93,7 @@ function ProductPage() {
       {/* Main Product Section */}
       <ProductDetails product={product} />
 
+      {/* Product Tabs */}
       <ProductTab product={product} />
 
       {/* Related Products */}
@@ -98,11 +102,17 @@ function ProductPage() {
           Related Products
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {relatedProducts.map((relatedProduct, index) => (
-            <SingleProduct key={index} product={relatedProduct} index={index} />
-          ))}
+          {productData.map((product: Product, index: number) =>
+            index > 3 ? null : (
+              <SingleProduct
+                key={`${product.name}-${index}`}
+                product={product}
+              />
+            )
+          )}
         </div>
       </div>
+      <Newsletter />
       <Footer />
     </div>
   );

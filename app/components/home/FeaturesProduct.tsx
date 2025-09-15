@@ -1,47 +1,33 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import SingleProduct from "../SingleProduct";
+import productData from "~/json/product.json";
 
 export type Product = {
-  image: string;
+  id: string;
   name: string;
-  price: string;
-  originalPrice?: string;
-  rating: number;
   sale?: boolean;
-  salePercent?: string;
+  description: string;
+  price: {
+    original_price: string;
+    discounted_price: string;
+    discount_percentage: number;
+  };
+  availability: string;
+  rating: { value: number; quantity: number };
+  sku: string;
+  brand: string;
+  category: string;
+  tags: string[];
+  additional_information: {
+    weight: string;
+    organic: boolean;
+    nutrition: string;
+  };
+  images: string[];
 };
 
-const FeaturedProducts: React.FC = () => {
-  const products: Product[] = [
-    {
-      image: "./products/greenApple.jpg",
-      name: "Green Apple",
-      price: "$14.99",
-      originalPrice: "$20.99",
-      rating: 4,
-      sale: true,
-      salePercent: "50%",
-    },
-    {
-      image: "./products/cabbage.jpg",
-      name: "Chanise Cabbage",
-      price: "$14.99",
-      rating: 3,
-    },
-    {
-      image: "./products/greenCapsicum.jpg",
-      name: "Green Capsicum",
-      price: "$14.99",
-      rating: 4,
-    },
-    {
-      image: "./products/ladiesFinger.jpg",
-      name: "Ladies Finger",
-      price: "$14.99",
-      rating: 5,
-    },
-  ];
+const FeaturedProduct: React.FC = () => {
 
   return (
     <section className="w-full px-[150px] pt-28 pb-20 relative flex justify-center flex-col">
@@ -64,13 +50,18 @@ const FeaturedProducts: React.FC = () => {
       {/* Product */}
       <div className="flex flex-wrap gap-10 items-center justify-center mt-10 w-full">
         <div className="flex gap-5 justify-center">
-          {products.map((product: Product, index: number) => (
-            <SingleProduct key={index} product={product} index={index} />
-          ))}
+          {productData.map((product, index) =>
+            index > 3 ? null : (
+              <SingleProduct
+                key={`${product.name}-${index}`}
+                product={product}
+              />
+            )
+          )}
         </div>
       </div>
     </section>
   );
 };
 
-export default FeaturedProducts;
+export default FeaturedProduct;

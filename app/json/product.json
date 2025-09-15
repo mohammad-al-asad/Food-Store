@@ -3,6 +3,7 @@
     "id": "251594",
     "name": "Chinese Cabbage",
     "description": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.",
+    "sale": true,
     "price": {
       "original_price": "$48.00",
       "discounted_price": "$17.28",
@@ -20,11 +21,11 @@
       "nutrition": "100 g of fresh leaves provides 20% of daily Vitamin C."
     },
     "images": [
-      "../products/cabbage.jpg",
-      "../products/cabbage-2.png",
-      "../products/cabbage-3.png",
-      "../products/cabbage-4.png",
-      "../products/cabbage-5.png"
+      "products/cabbage.jpg",
+      "products/cabbage-2.png",
+      "products/cabbage-3.png",
+      "products/cabbage-4.png",
+      "products/cabbage-5.png"
     ]
   },
   {
@@ -37,19 +38,17 @@
       "discount_percentage": 37
     },
     "availability": "In Stock",
+    "rating": { "value": 4, "quantity": 10 },
     "sku": "251595",
     "brand": "OrchardFresh",
-    "category": "Fresh Food",
+    "category": "Fresh Fruit",
     "tags": ["Fruit", "Fresh", "Healthy", "Apple"],
     "additional_information": {
       "weight": "1kg",
       "organic": true,
       "nutrition": "1 apple provides 15% of daily fiber."
     },
-    "images": [
-      "./products/greenApple.jpg",
-      "https://example.com/images/fresh-apples-2.jpg"
-    ]
+    "images": ["products/greenApple.jpg"]
   },
   {
     "id": "251596",
@@ -61,6 +60,7 @@
       "discount_percentage": 33
     },
     "availability": "In Stock",
+    "rating": { "value": 3, "quantity": 10 },
     "sku": "251596",
     "brand": "OceanCatch",
     "category": "Fish",
@@ -70,10 +70,7 @@
       "organic": false,
       "nutrition": "Rich in omega-3 fatty acids and protein."
     },
-    "images": [
-      "https://example.com/images/salmon-fillet-1.jpg",
-      "https://example.com/images/salmon-fillet-2.jpg"
-    ]
+    "images": ["products/salmonFillet.png"]
   },
   {
     "id": "251597",
@@ -85,6 +82,7 @@
       "discount_percentage": 38
     },
     "availability": "In Stock",
+    "rating": { "value": 1, "quantity": 10 },
     "sku": "251597",
     "brand": "PrimeBeef",
     "category": "Meat",
@@ -94,10 +92,7 @@
       "organic": false,
       "nutrition": "High in protein and iron."
     },
-    "images": [
-      "https://example.com/images/beef-steak-1.jpg",
-      "https://example.com/images/beef-steak-2.jpg"
-    ]
+    "images": ["products/beefSteak.png"]
   },
   {
     "id": "251598",
@@ -109,6 +104,7 @@
       "discount_percentage": 30
     },
     "availability": "In Stock",
+    "rating": { "value": 4, "quantity": 10 },
     "sku": "251598",
     "brand": "SpringFresh",
     "category": "Drinks",
@@ -118,14 +114,12 @@
       "organic": true,
       "nutrition": "Contains essential minerals for hydration."
     },
-    "images": [
-      "https://example.com/images/spring-water-1.jpg",
-      "https://example.com/images/spring-water-2.jpg"
-    ]
+    "images": ["products/springWater.png"]
   },
   {
     "id": "251599",
     "name": "Chips & Snacks",
+    "sale": true,
     "description": "Crunchy, delicious chips made with all-natural ingredients. Perfect for a quick snack.",
     "price": {
       "original_price": "$10.00",
@@ -133,6 +127,7 @@
       "discount_percentage": 35
     },
     "availability": "In Stock",
+    "rating": { "value": 2, "quantity": 10 },
     "sku": "251599",
     "brand": "SnackTime",
     "category": "Snacks",
@@ -142,10 +137,7 @@
       "organic": false,
       "nutrition": "Contains 10g of protein per serving."
     },
-    "images": [
-      "https://example.com/images/chips-snacks-1.jpg",
-      "https://example.com/images/chips-snacks-2.jpg"
-    ]
+    "images": ["products/chips&Snacks.png"]
   },
   {
     "id": "251600",
@@ -157,6 +149,7 @@
       "discount_percentage": 29
     },
     "availability": "In Stock",
+    "rating": { "value": 5, "quantity": 10 },
     "sku": "251600",
     "brand": "VeggieDelight",
     "category": "Vegetables",
@@ -166,10 +159,7 @@
       "organic": true,
       "nutrition": "Rich in vitamin A and fiber."
     },
-    "images": [
-      "https://example.com/images/carrot-sticks-1.jpg",
-      "https://example.com/images/carrot-sticks-2.jpg"
-    ]
+    "images": ["products/carrotSticks.png"]
   },
   {
     "id": "251601",
@@ -181,19 +171,17 @@
       "discount_percentage": 25
     },
     "availability": "In Stock",
+    "rating": { "value": 5, "quantity": 10 },
     "sku": "251601",
     "brand": "FreshSqueeze",
-    "category": "Drinks",
+    "category": "Water and Drinks",
     "tags": ["Juice", "Fresh", "Orange", "Vitamin C"],
     "additional_information": {
       "weight": "1L",
       "organic": false,
       "nutrition": "Contains 100% vitamin C, no added sugar."
     },
-    "images": [
-      "https://example.com/images/orange-juice-1.jpg",
-      "https://example.com/images/orange-juice-2.jpg"
-    ]
+    "images": ["products/orangeJuice.png"]
   },
   {
     "id": "251602",
@@ -205,6 +193,7 @@
       "discount_percentage": 20
     },
     "availability": "In Stock",
+    "rating": { "value": 3, "quantity": 10 },
     "sku": "251602",
     "brand": "FarmFresh",
     "category": "Meat",
@@ -214,9 +203,226 @@
       "organic": true,
       "nutrition": "High in protein, low in fat."
     },
-    "images": [
-      "https://example.com/images/chicken-breasts-1.jpg",
-      "https://example.com/images/chicken-breasts-2.jpg"
-    ]
+    "images": ["products/chickenBreasts.png"]
+  },
+  {
+    "id": "251606",
+    "name": "Chanise Cabbage",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "rating": { "value": 3, "quantity": 10 },
+    "sku": "251606",
+    "brand": "FarmFresh",
+    "category": "Vegetables",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": ["products/greenCapsicum.jpg"]
+  },
+  {
+    "id": "251607",
+    "name": "Green Chili",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "rating": { "value": 2, "quantity": 10 },
+    "sku": "251607",
+    "brand": "FarmFresh",
+    "category": "Vegetables",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": ["products/chili.jpg"]
+  },
+  {
+    "id": "251608",
+    "name": "Ladies Finger",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "rating": { "value": 3, "quantity": 10 },
+    "sku": "251608",
+    "brand": "FarmFresh",
+    "category": "Vegetables",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": ["products/ladiesFinger.jpg"]
+  },
+  {
+    "id": "251609",
+    "name": "Indian Malta",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "rating": { "value": 1, "quantity": 10 },
+    "sku": "251609",
+    "brand": "FarmFresh",
+    "category": "Fresh Fruit",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": ["products/malta.jpg"]
+  },
+  {
+    "id": "251610",
+    "name": "Green Lettuce",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "rating": { "value": 1, "quantity": 10 },
+    "sku": "251610",
+    "brand": "FarmFresh",
+    "category": "Vegetables",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": ["products/lettuce.jpg"]
+  },
+  {
+    "id": "251611",
+    "name": "Eggplant",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "rating": { "value": 5, "quantity": 10 },
+    "sku": "251611",
+    "brand": "FarmFresh",
+    "category": "Vegetables",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": ["products/eggplant.jpg"]
+  },
+  {
+    "id": "251612",
+    "name": "Red Tomato",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "rating": { "value": 2, "quantity": 10 },
+    "sku": "251612",
+    "brand": "FarmFresh",
+    "category": "Vegetables",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": ["products/tomato.jpg"]
+  },
+  {
+    "id": "251613",
+    "name": "Big Potatos",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "rating": { "value": 2, "quantity": 10 },
+    "sku": "251613",
+    "brand": "FarmFresh",
+    "category": "Vegetables",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": ["products/potato.jpg"]
+  },
+  {
+    "id": "251614",
+    "name": "Corn",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "rating": { "value": 5, "quantity": 10 },
+    "sku": "251613",
+    "brand": "FarmFresh",
+    "category": "Vegetables",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": ["products/corn.jpg"]
+  },
+  {
+    "id": "251615",
+    "name": "Fresh cauliflower",
+    "description": "Boneless, skinless chicken breasts, ideal for grilling or baking.",
+    "price": {
+      "original_price": "$15.00",
+      "discounted_price": "$12.00",
+      "discount_percentage": 20
+    },
+    "availability": "In Stock",
+    "rating": { "value": 4, "quantity": 10 },
+    "sku": "251615",
+    "brand": "FarmFresh",
+    "category": "Vegetables",
+    "tags": ["Meat", "Chicken", "Protein", "Healthy"],
+    "additional_information": {
+      "weight": "500g",
+      "organic": true,
+      "nutrition": "High in protein, low in fat."
+    },
+    "images": ["products/cauliflower.jpg"]
   }
 ]

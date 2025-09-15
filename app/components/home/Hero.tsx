@@ -3,7 +3,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="flex w-full h-[695px] bg-[#EDF2EE] relative bg-[url(./bg.png)] bg-no-repeat bg-contain items-center justify-center">
+    <section className="flex w-full h-[695px] bg-[#EDF2EE] relative bg-[url(./bg.png)] bg-no-repeat bg-contain items-center justify-center gap-5">
       {/* Arrow */}
       <div className="flex shrink-0 justify-center items-center bg-white rounded-full border border-solid border-neutral-200 fill-white h-[45px] stroke-[1px] stroke-neutral-200 w-[45px]">
         <FaArrowLeft />

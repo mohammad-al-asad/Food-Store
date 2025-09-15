@@ -1,34 +1,35 @@
 import React from "react";
 import SingleProduct from "../SingleProduct";
 import type { Product } from "./FeaturesProduct";
+import productData from "~/json/product.json";
 
-const FeaturedProducts: React.FC = () => {
-  const products: Product[] = [
-    {
-      image: "./products/greenApple.jpg",
-      name: "Green Apple",
-      price: "$14.99",
-      rating: 4,
-    },
-    {
-      image: "./products/cabbage.jpg",
-      name: "Chanise Cabbage",
-      price: "$14.99",
-      rating: 3,
-    },
-    {
-      image: "./products/greenCapsicum.jpg",
-      name: "Green Capsicum",
-      price: "$14.99",
-      rating: 5,
-    },
-    {
-      image: "./products/chili.jpg",
-      name: "Green Chili",
-      price: "$14.99",
-      rating: 4,
-    },
-  ];
+const BestProduct: React.FC = () => {
+  // const products: Product[] = [
+  //   {
+  //     image: "./products/greenApple.jpg",
+  //     name: "Green Apple",
+  //     price: "$14.99",
+  //     rating: 4,
+  //   },
+  //   {
+  //     image: "./products/cabbage.jpg",
+  //     name: "Chanise Cabbage",
+  //     price: "$14.99",
+  //     rating: 3,
+  //   },
+  //   {
+  //     image: "./products/greenCapsicum.jpg",
+  //     name: "Green Capsicum",
+  //     price: "$14.99",
+  //     rating: 5,
+  //   },
+  //   {
+  //     image: "./products/chili.jpg",
+  //     name: "Green Chili",
+  //     price: "$14.99",
+  //     rating: 4,
+  //   },
+  // ];
 
   return (
     <section className="w-full px-[150px] pt-28 pb-20 relative flex justify-center flex-col">
@@ -47,13 +48,18 @@ const FeaturedProducts: React.FC = () => {
       {/* Product */}
       <div className="flex flex-wrap gap-10 items-center justify-center mt-10 w-full">
         <div className="flex gap-5 justify-center">
-          {products.map((product, index) => (
-            <SingleProduct index={index} product={product} />
-          ))}
+          {productData.map((product:Product, index:number) =>
+            index > 3 ? null : (
+              <SingleProduct
+                key={`${product.name}-${index}`}
+                product={product}
+              />
+            )
+          )}
         </div>
       </div>
     </section>
   );
 };
 
-export default FeaturedProducts;
+export default BestProduct;

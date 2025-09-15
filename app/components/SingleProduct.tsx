@@ -5,7 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import type { Product } from "./home/FeaturesProduct";
 import { Link } from "react-router";
 
-function SingleProduct({ product }: { index: number; product: Product }) {
+function SingleProduct({ product }: { product: Product }) {
   return (
     <Link to={`/product/${251594}`} className="group">
       <div className="relative flex flex-col justify-end w-full bg-white rounded-lg border-2 border-neutral-200 hover:border-green-600 hover:shadow-lg hover:shadow-green-200 pt-4 transition-all duration-200">
@@ -21,20 +21,20 @@ function SingleProduct({ product }: { index: number; product: Product }) {
           />
         </div>
         {/* Sale */}
+        {product.sale && (
         <div
-          className={`absolute top-4 z-20 gap-1 justify-center items-center self-start px-2 py-1 ml-4 text-sm text-white whitespace-nowrap bg-red-500 rounded ${product.sale ? "flex" : "hidden"}`}
+          className={`absolute top-4 z-20 gap-1 justify-center items-center self-start px-2 py-1 ml-4 text-sm text-white whitespace-nowrap bg-red-500 rounded ${product.price.discount_percentage ? "flex" : "hidden"}`}
         >
           <span className="self-stretch my-auto text-white">Sale</span>
-          {product.sale && (
             <span className="self-stretch my-auto font-medium text-white">
-              {product.salePercent}
+              {product.price.discount_percentage}%
             </span>
-          )}
         </div>
+          )}
         {/* Image */}
         <div className="z-10 flex flex-col justify-center p-1.5 mt-0">
           <img
-            src={product.image}
+            src={`../${product.images[0]}`}
             className="object-contain max-w-full aspect-square w-[302px]"
             alt={product.name}
           />
@@ -46,17 +46,17 @@ function SingleProduct({ product }: { index: number; product: Product }) {
               <h3 className={`text-sm text-neutral-600`}>{product.name}</h3>
               <div className="flex gap-0.5 items-start self-start text-base whitespace-nowrap">
                 <span className="font-medium text-zinc-900">
-                  {product.price}
+                  {product.price.discounted_price}
                 </span>
-                {product.originalPrice && (
+                {product.price.original_price && (
                   <span className="line-through text-neutral-400">
-                    {product.originalPrice}
+                    {product.price.discounted_price}
                   </span>
                 )}
               </div>
             </div>
             <div>
-              <Rating value={product.rating} readOnly>
+              <Rating value={product.rating.value} readOnly>
                 {Array.from({ length: 5 }).map((_, index) => (
                   <RatingButton className="text-green-500" key={index} />
                 ))}

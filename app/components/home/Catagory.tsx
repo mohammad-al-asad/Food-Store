@@ -1,42 +1,54 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router";
+
+export type Category = {
+  image: string;
+  name: string;
+  count: number;
+  isSelected?: boolean;
+};
+export const categories: Category[] = [
+  {
+    image: "./catagories/vegetable.png",
+    name: "Vegetables",
+    count: 165,
+    isSelected: false,
+  },
+  {
+    image: "./catagories/fruits.png",
+    name: "Fresh Fruit",
+    count: 137,
+    isSelected: false,
+  },
+  {
+    image: "./catagories/fish.png",
+    name: "Fish",
+    count: 34,
+    isSelected: false,
+  },
+  {
+    image: "./catagories/meat.png",
+    name: "Meat",
+    count: 165,
+    isSelected: false,
+  },
+  {
+    image: "./catagories/softDrink.png",
+    name: "Water and Drinks",
+    count: 48,
+    isSelected: false,
+  },
+  {
+    image: "./catagories/snacks.png",
+    name: "Snacks",
+    count: 165,
+    isSelected: false,
+  },
+];
 
 const CategoriesSection: React.FC = () => {
-  const categories = [
-    {
-      image:"./catagories/vegetable.png",
-      name: "Vegetables",
-      products: "165 Products",
-      highlighted: true,
-    },
-    {
-      image:"./catagories/fruits.png",
-      name: "Fresh Fruit",
-      products: "137 Products",
-    },
-    {
-      image:"./catagories/fish.png",
-      name: "Fish",
-      products: "34 Products",
-    },
-    {
-      image:"./catagories/meat.png",
-      name: "Meat",
-      products: "165 Products",
-    },
-    {
-      image:"./catagories/softDrink.png",
-      name: "Water and Drinks",
-      products: "48 Products",
-    },
-    {
-      image:"./catagories/snacks.png",
-      name: "Snacks",
-      products: "165 Products",
-    },
-  ];
-
   return (
     <section className="relative flex z-10 items-center justify-center px-[100px] gap-4 py-28 mt-8 w-full shadow-sm bg-gradient-to-b from-[#F2F5F3] to-[#ffff]">
       {/* Decorative element */}
@@ -67,7 +79,8 @@ const CategoriesSection: React.FC = () => {
         {/* Catagories */}
         <div className="flex flex-wrap gap-2 mt-10 text-center">
           {categories.map((category, index) => (
-            <article
+            <Link
+              to={`shop/?cat=${category.name.toLowerCase().replaceAll(" ", "_")}`}
               key={index}
               className={`group transition-all w-[200px] flex flex-col items-center pt-8 pb-6 bg-white rounded-md border border-solid hover:border-green-800 hover:shadow-sm border-gray-200`}
             >
@@ -83,10 +96,10 @@ const CategoriesSection: React.FC = () => {
                   {category.name}
                 </h3>
                 <p className="mt-1.5 text-sm text-zinc-500">
-                  {category.products}
+                  {category.count} Products
                 </p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

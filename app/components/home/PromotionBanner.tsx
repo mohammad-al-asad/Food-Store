@@ -15,7 +15,7 @@ const PromotionalBanners: React.FC = () => {
             <article className="w-[650px] text-white">
               <div className="flex relative flex-col justify-center items-start px-10 py-20 w-full rounded-xl min-h-[360px] max-md:px-5 max-md:max-w-full">
                 <img
-                  src="./banner-1.jpg"
+                  src="./banner/banner-1.jpg"
                   className="object-cover rounded absolute inset-0 size-full rotate-180"
                   alt="Organic fruits and vegetables"
                 />
@@ -48,7 +48,7 @@ const PromotionalBanners: React.FC = () => {
             <article className="ml-5 w-[650px]">
               <div className="text-white flex relative flex-col justify-center items-start px-10 py-20 w-full rounded-lg min-h-[360px] max-md:px-5 max-md:max-w-full">
                 <img
-                  src="./banner-2.jpg"
+                  src="./banner/banner-2.jpg"
                   className="object-cover w-[650px] absolute inset-0 size-full rotate-180 rounded"
                   alt="Sale promotion background"
                 />

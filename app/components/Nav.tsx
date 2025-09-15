@@ -35,7 +35,7 @@ export default function Nav() {
             <IoIosArrowDown />
           </li>
           <li className="flex items-center text-[14px] font-[500] hover:text-green-500 gap-1">
-            <Link to={"/shop"}>Shop</Link>
+            <Link to={"/shop/?cat=all"}>Shop</Link>
             <IoIosArrowDown />
           </li>
           <li className="flex items-center text-[14px] font-[500] hover:text-green-500 gap-1">
@@ -52,7 +52,7 @@ export default function Nav() {
         </ul>
         {/* Logo */}
         <div className="flex gap-[8px] justify-center items-center">
-          <img className="h-[30px] w-[30px]" src="./logo.png" />
+          <img className="h-[30px] w-[30px]" src="../logo.png" />
           <h1 className="text-[32px] font-[500]">Ecobazar</h1>
         </div>
         {/* Icons */}
@@ -65,7 +65,9 @@ export default function Nav() {
             <CiSearch size={24} />
             <CiHeart size={24} />
             <SlHandbag size={20} />
-            <FaRegUser size={20} />
+            <Link to="/login">
+              <FaRegUser size={20} />
+            </Link>
           </div>
         </div>
       </div>

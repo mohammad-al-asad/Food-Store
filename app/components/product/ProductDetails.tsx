@@ -2,11 +2,11 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { CiHeart } from "react-icons/ci";
 import SocialLink from "~/components/SocialLink";
-import ProductImageGallery from "~/components/ProductImageGallery";
+import ProductImageGallery from "~/components/product/ProductImageGallery";
 import { Rating, RatingButton } from "~/components/ui/shadcn-io/rating";
-import { Button } from "~/components/ui/button";
 import { useState } from "react";
 import type { ProductDetail } from "~/routes/productPage";
+import Button from "../ui/Button";
 
 function ProductDetails({ product }: { product: ProductDetail }) {
   const [quantity, setQuantity] = useState(1);
@@ -118,10 +118,10 @@ function ProductDetails({ product }: { product: ProductDetail }) {
             </div>
 
             {/* Add to Cart */}
-            <Button className="flex-1 bg-green-600 hover:bg-green-700 text-white py-4 px-10 rounded-full">
+            <button className="flex justify-center items-center w-full h-[45px] bg-green-600 hover:bg-green-700 text-white py-4 px-10 rounded-full">
               <span>Add to Cart</span>
               <HiOutlineShoppingBag className="w-4 h-4 ml-3" />
-            </Button>
+            </button>
 
             {/* Wishlist */}
             <button className="p-4 bg-green-50 text-green-700 rounded-full hover:bg-green-100">

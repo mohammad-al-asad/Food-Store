@@ -2,32 +2,53 @@ import React from "react";
 import { FaGooglePlay } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import SocialLink from "./SocialLink";
+import { useLocation } from "react-router";
 
 export type FooterSection = {
-  title: string;
-  links: string[];
+  type: string;
+  links: { title: string; link: string }[];
 };
-const catagories = [
-  { title: "Fruit & Vegetables", link: "#" },
-  { title: "Fruit & Vegetables", link: "#" },
-  { title: "Fruit & Vegetables", link: "#" },
-  { title: "Fruit & Vegetables", link: "#" },
-];
+const catagories: FooterSection = {
+  type: "catagories",
+  links: [
+    { title: "Fruit & Vegetables", link: "#" },
+    { title: "Meat & Fish", link: "#" },
+    { title: "Bread & Bakery", link: "#" },
+    { title: "Beauty & Health", link: "#" },
+  ],
+};
 const Footer: React.FC = () => {
   const footerSections: FooterSection[] = [
     {
-      title: "My Account",
-      links: ["My Account", "Order History", "Shoping Cart", "Wishlist"],
+      type: "My Account",
+      links: [
+        { title: "My Account", link: "#" },
+        { title: "Order History", link: "#" },
+        { title: "Shoping Cart", link: "#" },
+        { title: "Wishlist", link: "#" },
+      ],
     },
     {
-      title: "Helps",
-      links: ["Contact", "Faqs", "Terms & Condition", "Privacy Policy"],
+      type: "Helps",
+      links: [
+        { title: "Contact", link: "#" },
+        { title: "Faqs", link: "#" },
+        { title: "Terms & Condition", link: "#" },
+        { title: "Privacy Policy", link: "#" },
+      ],
     },
     {
-      title: "Proxy",
-      links: ["About", "Shop", "Product", "Track Order"],
+      type: "Proxy",
+      links: [
+        { title: "About", link: "#" },
+        { title: "Shop", link: "#" },
+        { title: "Product", link: "#" },
+        { title: "Track Order", link: "#" },
+      ],
     },
   ];
+
+  const isHome = useLocation().pathname == "/";
 
   return (
     <footer className="bg-zinc-900 relative">
@@ -36,8 +57,8 @@ const Footer: React.FC = () => {
         alt="BG"
         className="absolute top-0 bottom-0 left-0 right-0 z-10"
       />
-      <div className="flex overflow-hidden flex-col pb-20 pt-3 mt-20 w-full px-[300px]">
-        <div className="flex flex-wrap gap-5 justify-between items-end self-end w-full">
+      <div className="flex overflow-hidden flex-col pb-20 pt-3 w-full px-[300px]">
+        <div className="flex flex-wrap gap-8 justify-between items-end self-end w-full">
           {/* First Coloum */}
           <div className="flex flex-col items-start mt-16 w-[300px]">
             <div className="flex gap-2 items-center text-3xl font-medium tracking-tighter leading-none text-white whitespace-nowrap">
@@ -52,43 +73,60 @@ const Footer: React.FC = () => {
               Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis
               dui, eget bibendum magn.
             </p>
-            <SocialLink />
+            {isHome ? (
+              <SocialLink />
+            ) : (
+              <div className="mt-4 text-[16px] leading-5 text-neutral-400 mb-4 flex gap-2">
+                <span className="text-white bold">(219) 555-0114</span>{" "}
+                <p>or</p>{" "}
+                <span className="text-white bold">Proxy@gmail.com</span>
+              </div>
+            )}
           </div>
           {/* Links */}
           {footerSections.map((section: FooterSection, index: number) => (
             <div key={index} className="flex flex-col items-start mt-16 z-50">
               <h4 className="self-stretch text-lg font-medium text-white">
-                {section.title}
+                {section.type}
               </h4>
               <div className="h-0.5 w-6 mt-0.5 bg-green-500" />
-              <nav className="pt-2 mt-3 text-sm text-neutral-400">
-                {section.links.map((link: string, linkIndex: number) => (
+              <nav className="pt-2 mt-3 text-sm text-neutral-400 z-50">
+                {section.links.map((singleLink, linkIndex: number) => (
                   <a
                     key={linkIndex}
-                    href="#"
+                    href={singleLink.link}
                     className={`block ${linkIndex > 0 ? "mt-3" : ""} hover:text-white text-neutral-400`}
                   >
-                    {link}
+                    {singleLink.title}
                   </a>
                 ))}
               </nav>
-              {/* Last Coloum Other*/}
-              {/* <nav className="pt-2 mt-3 text-sm text-neutral-400">
-                {catagories.map((catagory, index) => (
-                  <a
-                    key={index}
-                    href={catagory.link}
-                    className={`block ${index > 0 ? "mt-3" : ""} hover:text-white text-neutral-400`}
-                  >
-                    {catagory.title}
-                  </a>
-                ))}
-              </nav> */}
             </div>
           ))}
 
+          {/* Last Coloum Other*/}
+          <div className={`${isHome ? "hidden" : "block"} z-50`}>
+            <h4 className={`self-stretch text-lg font-medium text-white`}>
+              {catagories.type}
+            </h4>
+            <div className="h-0.5 w-6 mt-0.5 bg-green-500" />
+            <nav className="pt-2 mt-3 text-sm text-neutral-400">
+              {catagories.links.map((singleLink, linkIndex: number) => (
+                <a
+                  key={linkIndex}
+                  href={singleLink.link}
+                  className={`block ${linkIndex > 0 ? "mt-3" : ""} hover:text-white text-neutral-400`}
+                >
+                  {singleLink.title}
+                </a>
+              ))}
+            </nav>
+          </div>
+
           {/* Last Coloum Home*/}
-          <div className="self-stretch my-auto">
+          <div
+            className={`self-stretch my-auto ${isHome ? "block" : "hidden"}`}
+          >
             <h4 className="text-lg font-medium text-white">
               Download Mobile App
             </h4>

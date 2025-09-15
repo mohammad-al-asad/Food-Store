@@ -1,7 +1,7 @@
 import Hero from "~/components/home/Hero";
 import Nav from "~/components/Nav";
 import Features from "~/components/home/Features";
-import FeaturedProducts from "~/components/home/FeaturesProduct";
+import FeaturedProduct from "~/components/home/FeaturesProduct";
 import Catagory from "~/components/home/Catagory";
 import OrganicFood from "~/components/home/OrganicFood";
 import StatsSection from "~/components/home/StatsSection";
@@ -26,7 +26,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <Features />
-      <FeaturedProducts />
+      <FeaturedProduct />
       <Catagory />
       <OrganicFood />
       <StatsSection />
