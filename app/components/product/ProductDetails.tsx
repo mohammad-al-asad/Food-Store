@@ -6,7 +6,6 @@ import ProductImageGallery from "~/components/product/ProductImageGallery";
 import { Rating, RatingButton } from "~/components/ui/shadcn-io/rating";
 import { useState } from "react";
 import type { ProductDetail } from "~/routes/productPage";
-import Button from "../ui/Button";
 
 function ProductDetails({ product }: { product: ProductDetail }) {
   const [quantity, setQuantity] = useState(1);
