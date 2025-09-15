@@ -15,8 +15,8 @@ import Contact from "~/components/home/Contact";
 
 export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Food Store" },
+    { name: "description", content: "Created by M.A. Asad!" },
   ];
 }
 
