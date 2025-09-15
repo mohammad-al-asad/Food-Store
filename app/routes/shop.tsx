@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Button from "../components/ui/Button";
+import Button from "~/components/ui/Button";
 import Dropdown from "../components/ui/Dropdown";
 import ChipView from "../components/ui/ChipView";
 import SeekBar from "../components/ui/SeekBar";
@@ -353,7 +353,9 @@ const shop = () => {
 
               {/* Products Grid */}
               <div className="flex-1">
-                {filteredProducts.length === 0 ? <h1 className="text-center my-56">No Product Found</h1> : (
+                {filteredProducts.length === 0 ? (
+                  <h1 className="text-center my-56">No Product Found</h1>
+                ) : (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
                     {filteredProducts.map((product, index) => (
                       <SingleProduct key={index} product={product} />
