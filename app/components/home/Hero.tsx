@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
       {/* Image */}
       <img
         src="./vegetable.png"
-        className="w-[742px] h-[500px]"
+        className="w-[700px] h-[500px]"
         alt="Fresh organic vegetables background"
       />
       {/* Texts */}

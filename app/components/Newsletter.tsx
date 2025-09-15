@@ -2,7 +2,7 @@ import SocialLink from "./SocialLink";
 
 function Newsletter() {
   return (
-    <div className="flex items-center justify-between py-[80px] px-[300px] gap-10 bg-[#F7F7F7] self-end">
+    <div className="flex items-center justify-between py-[80px] sm:px-[200px] px-[300px] gap-10 bg-[#F7F7F7] self-end">
       <div className="w-[400px]">
         <h3 className="tracking-wide leading-none uppercase text-black text-xl font-bold mb-2">
           Subscribe Newsletter
